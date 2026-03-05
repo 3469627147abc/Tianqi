@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   
-  <meta property="og:title" content="2024深圳市智能机器人灵巧手大赛"/>
+  <meta property="og:title" content="天奇 | 面向机器人具身智能的数据采集方法"/>
   <meta property="og:url" content="https://github.com/Z-mingyu/Hospital/"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
 
-  <title>2024深圳市智能机器人灵巧手大赛</title>
+  <title>天奇 | 面向机器人具身智能的数据采集方法</title>
   
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -92,9 +92,9 @@
     <div class="container is-max-widescreen">
       <!-- <div class="columns is-centered"> -->
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">2024深圳市智能机器人灵巧手大赛</h1>
+          <h1 class="title is-1 publication-title">天奇 | 面向机器人具身智能的数据采集方法</h1>
           <div class="is-size-3 publication-authors">
-            2024.11-2024.12
+            2025.10-2026.03
           </div>
         </div>
     </div>
@@ -241,7 +241,7 @@
           <p style="margin-bottom: 30px">
  
         <video poster="" id="tree" autoplay controls muted loop height="100%">
-          <source src="static/figures/videos/overview.mp4"
+          <source src="static/figures/videos/project_x264.mp4"
           type="video/mp4">
         </video>
         </p>
@@ -261,8 +261,7 @@
         <h2 class="title is-3">简介</h2>
         <div class="content has-text-justified">
           <p>
-            初赛采用示教方式来抓取8个物品放置在指定颜色的塑料盘中，最后再抓取扫码枪扫描桌上的条形码，完成任务。决赛物品位置摆放随机，因此需要估计物品在三维空间的位置。首先用腕部相机进行手眼标定，然后同时获取RGB图像和深度图像。接着对RGB图像进行示例分割，结合深度图重建物体的3D点云。利用三维点云计算出物体的3D boxes，这就能得到物体的6D位姿。此外，还针对一些任务用示教的方式采集了模仿学习的数据，主要是机械臂和灵巧手的运动数据以及两个摄像头的RGB和深度图。
-          </p>
+            本方法围绕机器人具身智能训练需求，提出了一种面向物体交互任务的多模态数据采集方法，旨在从人类操作视频中构建高质量、结构化的人–物交互数据。该方法以 RGB-D 操作视频为输入，首先通过姿态估计重建人体关节运动序列，并结合视觉–语言模型识别被操作物体及其位姿变化，进而通过人–物交互距离建模与阈值判定实现接触事件自动检测，从而区分自由运动阶段与物理交互阶段。在数据结构设计上，采用手–臂解耦的分层表达方式：在手臂层面记录全局运动轨迹与任务相关的位姿约束信息，在手部层面刻画多指接触结构与局部几何关系，形成具有操作语义的高维交互数据。最终，通过统一的时序同步机制，实现人体运动、物体状态与接触信息的协同对齐，构建可直接用于机器人学习与策略优化的具身交互数据集，为复杂物体操作任务提供稳定、可泛化的数据支撑。
         </div>
       </div>
     </div>
